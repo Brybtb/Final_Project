@@ -1,6 +1,6 @@
 # Final_Project 
 
-Identifying Poor Cardiovascular Health
+Identifying Cardiovascular Disease
 - Cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, also known as the circulatory system. Some common cardiovascular diseases and conditions include heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability and the principal causes of cardiovascular disease death.” - CDC
 - Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs. 
 - This project aims to investigate factors that lead to poor cardiovascular health as well as explore which machine learning methods most accurately predict patients who are most likely to suffer from cardiovascular diseases. 
