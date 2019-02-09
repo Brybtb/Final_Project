@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask Example - Project 3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>   
+    <div class="container">
+        <h1>Welcome to the Cardiovascular Disease Prediction Page</h1>
+        <form action="/api/predict" method="get" target="_blank">
+            <div>
+                Age: <input type="text" name="age">
+                AvgGlucose: <input type="text" name="avgGlucose">
+                BMI: <input type="text" name="BMI">
+                Sex - Is Male?: <input type="checkbox" name="sex" id="" value=1>
+            </div>        
+            <div>
+                Fare: <input type="text" name="fare">
+            </div> 
+            <div>
+                Class - Is Class 3?: 
+                <input type="checkbox" name="pclass3" value=1>
+            </div>
+            <div>
+                Has Sibling or Spouse onboard?: 
+                <input type="checkbox" name="sibsp" value=1>
+            </div>
+            <div>
+                Is a Parent or Child?: 
+                <input type="checkbox" name="parch" value=1>
+            </div>
+            <br>
+            <button>
+                <input type="submit" value="Predict!">
+            </button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1>Exploring Certain Factors for High Risk of Cardiovascular Disease</h1>
+                <p>Use the interactive charts below to explore the dataset</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="well">
+                    <h5>SELECT Sample:</h5>
+                    <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                    <h3 class="panel-title">Panel Title</h3>
+                    </div>
+                    <div id="sample-metadata" class="panel-body"></div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="Chart1"></div>
+            </div>
+            <div class="col-md-5">
+                <div id="Chart2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="Chart3"></div>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+</body>
+
+</html>
