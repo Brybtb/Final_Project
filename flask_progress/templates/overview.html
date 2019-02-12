@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Flask Example - Project 3</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class = "container">
+                <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                    <a class="navbar-brand" href="index.html">Cardiovascular Disease Prediction Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="nav-link" href="http://127.0.0.1:5000">Prediction Page</a></li>  
+                        <li><a class="nav-link" href="http://127.0.0.1:5000/overview">Project Overview</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Project Overview</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Introduction</h3>
+                        </div>
+                        <div class="panel-body"> 
+                            <ul>
+                                <li>
+                                    Cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, also known as the circulatory system. Some common cardiovascular diseases and conditions include heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability and the principal causes of cardiovascular disease death.” - CDC
+                                </li>
+                                <li>
+                                    Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs.
+                                </li>
+                                <li>
+                                    This project aims to investigate factors that lead to poor cardiovascular health as well as explore which machine learning methods most accurately predict patients who are most likely to suffer from cardiovascular diseases.
+                                </li>
+                                <li>
+                                    <i>Keywords: Machine Learning, Cardiovascular Health, Diagnosis, Classification</i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Project Process</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h5>Step 1: Research / Planning / Project Setup</h5>
+                            <ul>
+                                <li>create a repository in github, add README.md file to repository, upload initial dataset</li>
+                            </ul>
+                            <h5>Step 2: Create a Jupyter Notebook for ETL / Machine Learning </h5>
+                            <ul>
+                                <li>Data Cleaning: Load Dataset, inspect basics; Deal with Missing data; Check for outliers; Convert categorical varables to numeric; Explore our target variable’s balance</li>
+                                <li>Data Exploration to decide which variables to keep: View distributions of variables, View descriptive stats, Check relationships among variables; Split data into training and testing, train decision tree and random forest to evaluate feature importance</li>   
+                                <li>Train different supervised classification machine learning models to predict diagnosis: logistic regression, random forest, Support Vector Machines (SVM)</li>
+                                <li>Export chosen model for flask app</li>
+                            </ul>
+                            <h5>Step 3: create flask app for prediction dashboard</h5> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- <div class="well">
+                        <h5>SELECT Sample:</h5>
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                    </div> -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Dataset Features</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>The stroke dataset used for this Cardiovascular Disease Classifier can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</a></p>
+                            Feature List:
+                            <ul> 
+                                <li>Average Glucose Level: Number between 0 and 300 (mg/dL)</li>
+                                <li>BMI: Number between 0 and 100</li>
+                                <li>Age: Integer between 0 and 100</li>
+                                <li>Ever married? Yes or No</li>
+                                <li>Gender: Male or Female</li>
+                                <li>Residence Type: Urban or Rural</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Use the interactive charts below to explore the dataset's features</h3>
+                        </div>
+                        <div class="panel-body">
+                            Select Feature 1
+                            <br>Select Feature 2
+                            <br>The graphs below display the distribution of feature 1, distribution of feature 2, and relationship between feature 1 and 2.
+                            
+                            Risk_low	
+                            AvgGlucose	
+                            BMI	
+                            Age	
+                            EverMarried_Yes	
+                            ResidenceType_Urban	
+                            Gender_Male 
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">References:</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li>Project Setup and Organization: University of Chicago’s Data Science for Social Good Fellowship Resources</li>
+                                <li>V. Ramalingam, V., Dandapath, A., & Karthik Raja, M. (2018). Heart disease prediction using machine learning techniques : a survey. International Journal of Engineering & Technology, 7(2.8), 684-687. doi:http://dx.doi.org/10.14419/ijet.v7i2.8.10557</li>
+                                <li>Association of American Medical Colleges (AAMC) & National Association of Accountable Care Organizations. (2016). High-Risk-Patient Identification: Strategies for Success (Rep.). Retrieved January 19, 2019, from Association of American Medical Colleges website: https://www.aamc.org/download/470456/data/riskid.pdf.</li>
+                                <li>Niehaus, K. E., & Clifton, D. A. (2016). Machine learning for chronic disease. Machine Learning for Healthcare Technologies, 2, 227. - Fryar CD, Chen T, Li X. Prevalence of Uncontrolled Risk Factors for Cardiovascular Disease: United States, 1999–2010. NCHS Data Brief, No. 103. Hyattsville, MD: National Center for Health Statistics, Centers for Disease Control and Prevention, US Dept of Health and Human Services; 2012.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+
+        <footer class="navbar navbar-default navbar-fixed-bottom">
+            <div class = "container-fluid">
+                <div class="navbar-header">
+                    <span>© 2018 Brian Bonewitz, Darren Barreto, Cassandra Nellis. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+
+</html>

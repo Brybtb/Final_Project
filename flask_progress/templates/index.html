@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Flask Example - Project 3</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+    <!-- <body style="background-color: #ffe5e5">    -->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class = "container">
+                <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                    <a class="navbar-brand" href="index.html">Cardiovascular Disease Prediction Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="nav-link" href="http://127.0.0.1:5000">Prediction Page</a></li>  
+                        <li><a class="nav-link" href="http://127.0.0.1:5000/overview">Project Overview</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row"> 
+                <div class="col-md-12 text-center">
+                    <h1>Welcome to the Cardiovascular Disease Prediction Page</h1>
+                    <p>Fill out the following form and click on the 'Predict!' button to determine if <br> 
+                        the measurements entered are likely to result in cardiovascular disease or not.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Form:</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/api/predict" method="get" target="_blank">
+                                
+                                <div>
+                                    Average Glucose: <input type="text" name="avgGlucose"> (Enter a number between 0.00-300.00 (mg/dL)<br><br>
+                                </div>   
+                                <div>   
+                                    BMI: <input type="text" name="BMI"> (Enter a number between 0.0-100.0)<br><br>
+                                </div>  
+                                <div>
+                                    Age: <input type="text" name="age"> (Enter an integer between 0-100)<br><br>
+                                </div>
+                                <div>
+                                    Marriage Status: Ever Married? <input type="checkbox" name="marriage" id="" value=1> (Check box if Yes, leave box unchecked if No)<br><br>
+                                </div> 
+                                <div>   
+                                    Is Gender Male? <input type="checkbox" name="gender" id="" value=1> (Check box if Male, leave box unchecked if Female)<br><br>
+                                </div>  
+                                <div>  
+                                    Residence Type: Urban? <input type="checkbox" name="residence" id="" value=1> (Check box if Urban, leave box unchecked if Rural)<br><br>
+                                </div>        
+                                <button>
+                                    <input type="submit" value="Predict!">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Results:</h3>
+                        </div>
+                        <div class="panel-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    
+        <footer class="navbar navbar-default navbar-fixed-bottom">
+            <div class = "container-fluid">
+                <div class="navbar-header">
+                    <span>© 2018 Brian Bonewitz, Darren Barreto, Cassandra Nellis. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
