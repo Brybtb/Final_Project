@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Welcome to my Titanic Survival Prediction Page</h1>
+    
+        <form action="/api/predict" method="get" target="_blank">
+            <!-- AvgGlucose	BMI	Age	EverMarried_Yes	ResidenceType_Urban	Gender_Male -->
+            <div>
+                AvgGlucose: <input type="text" name="AvgGlucose">
+                BMI: <input type="text" name="BMI">
+                Age: <input type="text" name="Age">  
+            </div> 
+
+            <div>
+                Ever been married?: 
+                Ever Married: <input type="checkbox" name="EverMarried_Yes" id="" value=1>
+            </div>
+            <div>
+                Rural or Urban Residence?: 
+                Rural: <input type="checkbox" name="ResidenceType_Urban" value=1>
+            </div>
+            <div> 
+                Sex - Is Male?: <input type="checkbox" name="Gender_Male" id="" value=1>
+            </div>
+
+            <br>
+
+            <button>
+                <input type="submit" value="Predict!">
+            </button>
+        </form>
+    </div>
+</body>
+</html>
