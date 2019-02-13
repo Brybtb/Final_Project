@@ -30,8 +30,8 @@ def predict():
     BMI = request.args.get("BMI") or 0
     Age = request.args.get("Age") or 0
     EverMarried_Yes = request.args.get("EverMarried_Yes") or 0
-    ResidenceType_Urban = request.args.get('ResidenceType_Urban')
-    Gender_Male = request.args.get("Gender_Male")
+    ResidenceType_Urban = request.args.get('ResidenceType_Urban') or 0
+    Gender_Male = request.args.get("Gender_Male") or 0
 
     #print("#"*80)
     features = [[AvgGlucose, BMI, Age, EverMarried_Yes, ResidenceType_Urban, Gender_Male]]
