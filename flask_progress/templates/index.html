@@ -32,7 +32,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>                        
                         </button>
-                    <a class="navbar-brand" href="http://127.0.0.1:5000">Cardiovascular Disease Classification Dashboard</a>
+                    <!-- <a class="navbar-brand" href="http://127.0.0.1:5000">Cardiovascular Disease Classification Dashboard</a> -->
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -46,8 +46,8 @@
             <div class="row"> 
                 <div class="col-md-12 text-center">  
                     <h1>Classification Page</h1>
-                    <p>Fill out the following form and click on the 'Predict!' button to determine if 
-                        the measurements entered are likely to result in cardiovascular disease or not.</p>
+                    <p>Fill out the following form and click on the 'Predict!' button <br> to see if 
+                     cardiovascular disease is present or not.</p>
                 </div>
             </div>
             <div class="row">
@@ -61,8 +61,8 @@
                                 <div>Average Glucose: <input type="text" id="avgGlucose"> (Enter an integer between 0-300 mg/dL)<br><br></div>   
                                 <div>BMI: <input type="text" id="BMI"> (Enter an integer between 0-100)<br><br></div>  
                                 <div>Age: <input type="text" id="Age"> (Enter an integer between 0-100)<br><br></div>
-                                <div>Marriage Status: Have you ever been married? <input type="checkbox" id="EverMarried_Yes" value=1> (Check box if Yes, leave unchecked if No)<br><br></div> 
-                                <div>Gender: Male? <input type="checkbox" id="Gender_Male" value=1> (Check box if Male, leave unchecked if Female)<br><br></div>  
+                                <div>Have you ever been married? <input type="checkbox" id="EverMarried_Yes" value=1> (Check box if Yes, leave unchecked if No)<br><br></div> 
+                                <div>Is your gender male?<input type="checkbox" id="Gender_Male" value=1> (Check box if Male, leave unchecked if Female)<br><br></div>  
                                 <div>Residence Type: Urban? <input type="checkbox" id="ResidenceType_Urban" value=1> (Check box if Urban, leave unchecked if Rural)<br><br></div>        
                                 <button id="submit-btn" class="btn btn-default">Predict!</button>
                             </form>
