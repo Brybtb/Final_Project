@@ -11,6 +11,17 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
 
+    <script>
+        function validateForm() {
+            var x = document.forms["form"]["avgGlucose"].value;
+            var y = document.forms["form"]["BMI"].value;
+            var z = document.forms["form"]["Age"].value;
+            if (x == "") {alert("Average Glucose must be filled out"); return false;}
+            else if (y == "") {alert("BMI must be filled out"); return false;}
+            else if (z == "") {alert("Age must be filled out"); return false;}
+        }
+    </script>
+
     <body>
     <!-- <body style="background-color: #ffe5e5">    -->
         <nav class="navbar navbar-default navbar-static-top">
@@ -21,7 +32,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>                        
                         </button>
-                    <a class="navbar-brand" href="index.html">Cardiovascular Disease Classification Dashboard</a>
+                    <a class="navbar-brand" href="http://127.0.0.1:5000">Cardiovascular Disease Classification Dashboard</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -33,7 +44,8 @@
         </nav>
         <div class="container">
             <div class="row"> 
-                <div class="col-md-12 text-center"> 
+                <div class="col-md-12 text-center">  
+                    <h1>Classification Page</h1>
                     <p>Fill out the following form and click on the 'Predict!' button to determine if 
                         the measurements entered are likely to result in cardiovascular disease or not.</p>
                 </div>
@@ -45,29 +57,14 @@
                             <h3 class="panel-title">Form:</h3>
                         </div>
                         <div class="panel-body">
-                            <form action="/api/predict" method="get" target="_blank">
-                                
-                                <div>
-                                    Average Glucose: <input type="text" name="avgGlucose"> (Enter a number between 0.00-300.00 (mg/dL)<br><br>
-                                </div>   
-                                <div>   
-                                    BMI: <input type="text" name="BMI"> (Enter a number between 0.0-100.0)<br><br>
-                                </div>  
-                                <div>
-                                    Age: <input type="text" name="Age"> (Enter an integer between 0-100)<br><br>
-                                </div>
-                                <div>
-                                    Marriage Status: Ever Married? <input type="checkbox" name="EverMarried_Yes" id="" value=1> (Check box if Yes, leave box unchecked if No)<br><br>
-                                </div> 
-                                <div>   
-                                    Is Gender Male? <input type="checkbox" name="Gender_Male" id="" value=1> (Check box if Male, leave box unchecked if Female)<br><br>
-                                </div>  
-                                <div>  
-                                    Residence Type: Urban? <input type="checkbox" name="ResidenceType_Urban" id="" value=1> (Check box if Urban, leave box unchecked if Rural)<br><br>
-                                </div>        
-                                <button>
-                                    <input type="submit" value="Predict!">
-                                </button>
+                            <form id="form">
+                                <div>Average Glucose: <input type="text" id="avgGlucose"> (Enter an integer between 0-300 mg/dL)<br><br></div>   
+                                <div>BMI: <input type="text" id="BMI"> (Enter an integer between 0-100)<br><br></div>  
+                                <div>Age: <input type="text" id="Age"> (Enter an integer between 0-100)<br><br></div>
+                                <div>Marriage Status: Have you ever been married? <input type="checkbox" id="EverMarried_Yes" value=1> (Check box if Yes, leave unchecked if No)<br><br></div> 
+                                <div>Gender: Male? <input type="checkbox" id="Gender_Male" value=1> (Check box if Male, leave unchecked if Female)<br><br></div>  
+                                <div>Residence Type: Urban? <input type="checkbox" id="ResidenceType_Urban" value=1> (Check box if Urban, leave unchecked if Rural)<br><br></div>        
+                                <button id="submit-btn" class="btn btn-default">Predict!</button>
                             </form>
                         </div>
                     </div>
@@ -77,24 +74,34 @@
                         <div class="panel-heading">
                             <h3 class="panel-title">Results:</h3>
                         </div>
-                        <div class="panel-body">
+                        <div id="results-panel-body" class="panel-body">
+                            <p><span id="resultline1"></span></p>
+                            <ul>
+                                <li><span id="glucoseID"></span></li>
+                                <li><span id="bmiID"></span></li>
+                                <li><span id="ageID"></span></li>
+                                <li><span id="marriageID"></span></li>
+                                <li><span id="genderID"></span></li>
+                                <li><span id="residenceID"></span></li> 
+                            </ul>
+                            <hr>
+                            <p><b><span id="diagnosisID"></span></b></p>
+                            <hr>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <br>
-        <br>
 
-        <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+        <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
-    
-        <footer class="navbar navbar-default navbar-fixed-bottom">
-            <div class = "container-fluid">
-                <div class="navbar-header">
-                    <span>© 2018 Brian Bonewitz, Darren Barreto, Cassandra Nellis. All rights reserved.</span>
-                </div>
+        <script src="static/app.js"></script> 
+
+        <footer class="navbar navbar-default navbar-static-bottom">
+            <div class = "container-fluid text-center"> 
+                <br>
+                <span>© 2019 Brian Bonewitz, Darren Barreto, Cassandra Nellis. All rights reserved.</span>
             </div>
         </footer>
 
