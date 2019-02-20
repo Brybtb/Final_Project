@@ -1,48 +1,61 @@
 # Final_Project 
 
-Identifying Cardiovascular Disease
-- Cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, also known as the circulatory system. Some common cardiovascular diseases and conditions include heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability and the principal causes of cardiovascular disease death.” - CDC
-- Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs. 
-- This project aims to investigate factors that lead to poor cardiovascular health as well as explore which machine learning methods most accurately predict patients who are most likely to suffer from cardiovascular diseases. 
-- Keywords: Machine Learning, Cardiovascular Health, Diagnosis, Classification
+Predicting Cardiovascular Disease
+- According to the CDC, cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, such as heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability, and the principal causes of cardiovascular disease death [<a href="https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html">1</a>], [<a href="https://www.ncbi.nlm.nih.gov/books/NBK83160/">2</a>].
+- Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs.
+- This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately classify patients as having or not having cardiovascular disease given certain patient measurements and demogrpahic information.
+- <i>Keywords: Machine Learning, Cardiovascular Disease, Diagnosis, Classification</i> 
 
-Project Progress: Due Date February 23rd
-
-Step 1: Research / Planning / Project Setup
-- create a repository in github for the final project (Brian): https://github.com/Brybtb/Final_Project 
-- add README.md file to repository that describes our project (Darren)
-- upload initial dataset to repository (Cassie)
-
-Step 2: ETL / ML: 
-Create a jupyter notebook for data cleaning and running models (Brian)
-Jupyter notebook should include:
-1) Data Cleaning
-- Load Dataset, inspect basics. 
-- Deal with Missing data: 3% BMI data is missing -  need to Impute values; 30% Smoking Data is missing - need to delete column
-- Check for outliers: potentially remove them? Process = (1) Log transformations (2) Standardizations (3) Remove outliers
-- Convert categorical to numeric
-- Explore our target variable’s balance:  Our dataset is unbalanced - need to (source) - (1) balance with over-sampling on our training data with SMOTE, (2) account for cross-validation, (3) perform over- or under-sampling on each fold independently to get an honest estimate of model performance
-2) Data Exploration to decide which variables to keep:
-- Distributions of variables
-- Descriptive stats
-- Check relationships among variables
-3) Split data into training and testing: Number of iterations? Split ratio? 
-- Because we have a small dataset, we will use cross validation since no single split (like 90:10, 80:20, etc) is going to give satisfactory variance in its estimates. 
-4) Use different supervised classification machine learning models to predict diagnosis: 
-- 1) Train logistic regression
-- 2)  train a random forest - Possibly improve it with hyperparameter tuning
-- 3) Train a Support Vector Machines (SVM)
-5) Assess and Compare the models
-
-Step 3: define conclusions and create visualizations <br>
-TODO: create/format files so that we can use flask and heroku to display our findings:
-- Set up index / css / python / js files
-- Set up files to deploy with heroku
+Project Process: 
+<br>
+<h5>Step 1: Research / Planning / Project Setup</h5>
+<ul>
+<li>Research project topics, datasets, and appropriate machine learning methods related to population health management [<a href="https://www.aamc.org/download/470456/data/riskid.pdf">3</a>], [<a href="https://www.sciencepubco.com/index.php/ijet/article/view/10557">4</a>].</li>
+<li>Define project workflow and conceptualize data pipeline [<a href="https://github.com/dssg/hitchhikers-guide/tree/master/curriculum/0_before_you_start/pipelines-and-project-workflow">5</a>].<br>
+<img src="https://raw.githubusercontent.com/dssg/hitchhikers-guide/master/curriculum/0_before_you_start/pipelines-and-project-workflow/pipeline_diagram.png" style="width:100%" alt="data pipeline diagram"></li>
+<li>Create a <a href="https://github.com/Brybtb/Final_Project/tree/master">shared repository</a> in github, add README.md file to repository, upload initial dataset</li>
+</ul>
+<br>
+<h5>Step 2: Create a Jupyter Notebook for ETL and Building Machine Learning Models</h5>
+<ul>
+<li>Data Cleaning: load dataset, inspect basics; handle missing data; handle outliers; binary encoding; explore dataset balance</li>
+<li>Data Exploration: View variable distributions; view descriptive statistics; view relationships among variables, evaluate variable importance</li>
+<li>Train different supervised classification machine learning models to predict cardiovascular diagnosis: (1) logistic regression, (2) support vector classifier, (3) decision trees, and (4) random forest classifier</li>
+<li>Export chosen scaler and model for flask application</li>
+</ul>
+<br>
+<h5>Step 3: Create flask app for a prediction dashboard and deploy with Heroku</h5> 
+<ul>
+<li>Set up index.html, style.css, app.py, app.js files</li>
+<li>Set up additional files for heroku deployment</li>
  
+Dataset Features:
+The stroke dataset used for our Cardiovascular Disease Classifier can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</a>
+<br>
+Feature List:
+<ul> 
+<li>Average Glucose Level: Number between 0 and 300 (mg/dL)</li>
+<li>BMI: Number between 0 and 100</li>
+<li>Age: Integer between 0 and 100</li>
+<li>Ever married? Yes or No</li>
+<li>Gender: Male or Female</li>
+<li>Residence Type: Urban or Rural</li>
+</ul>
  
+ <h3>Conclusions</h3>
+- We used 6 predictor variables from Kaggle’s stroke dataset to classify patients based on the the presence of cardiovascular disease (using their combined risk of having heart disease, stroke and/or hypertension).
+- We then used multiple models to predict the presence of disease. Based on the 8 models that we evaluated, the random forest classifier model using the resampled data was chosen as our final model to use for our flask app, as it had the best harmonic mean between precision and recall (F1 score = 0.83).
+- Furthermore, we determined that the best predictors of cardiovascular disease are the patient's (1) average glucose level, (2) BMI, and (3) age.
+ 
+<h3>Possible Improvements</h3>
+- In the future, we could use k-fold cross-validation when splitting our dataset since we have a small dataset and no single split (like 90:10, 80:20, etc.) is going to give satisfactory variance in its estimates
+- We could also try to further improve our random forest model with hyperparameter tuning through a grid search.
+
 References: 
-- Project Setup and Organization: University of Chicago’s Data Science for Social Good Fellowship Resources
+- Centers for Disease Control and Prevention. (2017, September 15). Cardiovascular Health. Retrieved February 1, 2019, from https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html
+- Institute of Medicine (US) Committee on a National Surveillance System for Cardiovascular and Select Chronic Diseases. A Nationwide Framework for Surveillance of Cardiovascular and Chronic Lung Diseases. Washington (DC): National Academies Press (US); 2011. 2, Cardiovascular Disease. Available from: https://www.ncbi.nlm.nih.gov/books/NBK83160/ 
 - V. Ramalingam, V., Dandapath, A., & Karthik Raja, M. (2018). Heart disease prediction using machine learning techniques : a survey. International Journal of Engineering & Technology, 7(2.8), 684-687. doi:http://dx.doi.org/10.14419/ijet.v7i2.8.10557
-- Microsoft’s Health Cortana Analytics Reporting Application (github)
-- Association of American Medical Colleges (AAMC) & National Association of Accountable Care Organizations. (2016). High-Risk-Patient Identification: Strategies for Success (Rep.). Retrieved January 19, 2019, from Association of American Medical Colleges website: https://www.aamc.org/download/470456/data/riskid.pdf. 
-- Niehaus, K. E., & Clifton, D. A. (2016). Machine learning for chronic disease. Machine Learning for Healthcare Technologies, 2, 227.  - Fryar CD, Chen T, Li X. Prevalence of Uncontrolled Risk Factors for Cardiovascular Disease: United States, 1999–2010. NCHS Data Brief, No. 103. Hyattsville, MD: National Center for Health Statistics, Centers for Disease Control and Prevention, US Dept of Health and Human Services; 2012.
+- Data Science for Social Good | Center for Data Science and Public Policy, University of Chicago. (2018). Pipelines and Project Workflow. Retrieved February 1, 2019, from https://github.com/dssg/hitchhikers-guide/tree/master/curriculum/0_before_you_start/pipelines-and-project-workflow
+- Association of American Medical Colleges (AAMC) & National Association of Accountable Care Organizations. (2016). High-Risk-Patient Identification: Strategies for Success (Rep.). Retrieved January 19, 2019, from Association of American Medical Colleges website: https://www.aamc.org/download/470456/data/riskid.pdf.
+- Niehaus, K. E., & Clifton, D. A. (2016). Machine learning for chronic disease. Machine Learning for Healthcare Technologies, 2, 227.
+- Fryar CD, Chen T, Li X. Prevalence of Uncontrolled Risk Factors for Cardiovascular Disease: United States, 1999–2010. NCHS Data Brief, No. 103. Hyattsville, MD: National Center for Health Statistics, Centers for Disease Control and Prevention, US Dept of Health and Human Services; 2012.</li>
