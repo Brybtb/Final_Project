@@ -13,7 +13,7 @@
 
     <script>
         function validateForm() {
-            var x = document.forms["form"]["avgGlucose"].value;
+            var x = document.forms["form"]["AvgGlucose"].value;
             var y = document.forms["form"]["BMI"].value;
             var z = document.forms["form"]["Age"].value;
             if (x == "") {alert("Average Glucose must be filled out"); return false;}
@@ -32,16 +32,17 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>                        
                         </button>
-                    <!-- <a class="navbar-brand" href="http://127.0.0.1:5000">Cardiovascular Disease Classification Dashboard</a> -->
+                    <a class="navbar-brand" href="http://127.0.0.1:5000">Cardiovascular Disease Prediction</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="nav-link" href="http://127.0.0.1:5000">Classification Page</a></li>  
+                        <li><a class="nav-link" href="http://127.0.0.1:5000">Prediction Page</a></li>  
                         <li><a class="nav-link" href="http://127.0.0.1:5000/overview">Project Overview</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+
         <div class="container">
             <div class="row"> 
                 <div class="col-md-12 text-center">  
@@ -58,7 +59,7 @@
                         </div>
                         <div class="panel-body">
                             <form id="form">
-                                <div>Average Glucose: <input type="text" id="avgGlucose"> (Enter an integer between 0-300 mg/dL)<br><br></div>   
+                                <div>Average Glucose: <input type="text" id="AvgGlucose"> (Enter an integer between 0-300 mg/dL)<br><br></div>   
                                 <div>BMI: <input type="text" id="BMI"> (Enter an integer between 0-100)<br><br></div>  
                                 <div>Age: <input type="text" id="Age"> (Enter an integer between 0-100)<br><br></div>
                                 <div>Have you ever been married? <input type="checkbox" id="EverMarried_Yes" value=1> (Check box if Yes, leave unchecked if No)<br><br></div> 
