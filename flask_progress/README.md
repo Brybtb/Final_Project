@@ -4,7 +4,7 @@
 <ul>
 <li>According to the CDC, cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, such as heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability, and the principal causes of cardiovascular disease death [<a href="https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html">1</a>], [<a href="https://www.ncbi.nlm.nih.gov/books/NBK83160/">2</a>].</li>
 <li>Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs.</li>
-<li>This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately classify patients as having or not having cardiovascular disease given certain patient measurements and demogrpahic information. The stroke dataset used for our Cardiovascular Disease Predictor can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here</a></li>
+<li>This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately classify patients as having or not having cardiovascular disease given certain patient measurements and demogrpahic information. The stroke dataset used for our Cardiovascular Disease Predictor can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here</a>.</li>
 <li><i>Keywords: Machine Learning, Cardiovascular Disease, Diagnosis, Classification</i></li>
 </ul>
 
@@ -21,10 +21,8 @@
 <ul>
 <li>Data Cleaning: load dataset, inspect basics; handle missing data; handle outliers; binary encoding; define target variable</li>
 <li>Data Exploration: view dataset balance; view variable distributions; view descriptive statistics; view relationships among variables, evaluate variable importance</li>
- <li>Create a balanced dataset through over-sampling with replacement.</li>
-<li>Train different supervised classification machine learning models to predict cardiovascular diagnosis: (1) logistic regression, (2) support vector classifier, (3) decision trees, and (4) random forest classifier.</li>
-<li>Evaluate models trained with original and re-sampled data and choose one of the 8 as the final model.</li>
-<li>Export chosen scaler and model for flask application</li>
+<li>Create a balanced dataset then train supervised classification machine learning models on original and re-sampled dataset: (1) logistic regression, (2) support vector classifier, (3) decision trees, and (4) random forest classifier.</li>
+<li>Evaluate models trained with original and re-sampled data and choose one of the 8 as the final model; export chosen scaler and model for flask application</li>
 </ul>
 
 <h4>Step 3: Create flask app for a prediction dashboard and deploy with Heroku</h4> 
