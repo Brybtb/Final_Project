@@ -51,11 +51,20 @@ Feature List:
 - In the future, we could use k-fold cross-validation when splitting our dataset since we have a small dataset and no single split (like 90:10, 80:20, etc.) is going to give satisfactory variance in its estimates
 - We could also try to further improve our random forest model with hyperparameter tuning through a grid search.
 
-References: 
-- Centers for Disease Control and Prevention. (2017, September 15). Cardiovascular Health. Retrieved February 1, 2019, from https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html
-- Institute of Medicine (US) Committee on a National Surveillance System for Cardiovascular and Select Chronic Diseases. A Nationwide Framework for Surveillance of Cardiovascular and Chronic Lung Diseases. Washington (DC): National Academies Press (US); 2011. 2, Cardiovascular Disease. Available from: https://www.ncbi.nlm.nih.gov/books/NBK83160/ 
-- V. Ramalingam, V., Dandapath, A., & Karthik Raja, M. (2018). Heart disease prediction using machine learning techniques : a survey. International Journal of Engineering & Technology, 7(2.8), 684-687. doi:http://dx.doi.org/10.14419/ijet.v7i2.8.10557
-- Data Science for Social Good | Center for Data Science and Public Policy, University of Chicago. (2018). Pipelines and Project Workflow. Retrieved February 1, 2019, from https://github.com/dssg/hitchhikers-guide/tree/master/curriculum/0_before_you_start/pipelines-and-project-workflow
-- Association of American Medical Colleges (AAMC) & National Association of Accountable Care Organizations. (2016). High-Risk-Patient Identification: Strategies for Success (Rep.). Retrieved January 19, 2019, from Association of American Medical Colleges website: https://www.aamc.org/download/470456/data/riskid.pdf.
-- Niehaus, K. E., & Clifton, D. A. (2016). Machine learning for chronic disease. Machine Learning for Healthcare Technologies, 2, 227.
-- Fryar CD, Chen T, Li X. Prevalence of Uncontrolled Risk Factors for Cardiovascular Disease: United States, 1999–2010. NCHS Data Brief, No. 103. Hyattsville, MD: National Center for Health Statistics, Centers for Disease Control and Prevention, US Dept of Health and Human Services; 2012.</li>
+<h3>References:</h3>
+<ul>
+                                <li>Centers for Disease Control and Prevention. (2017, September 15). Cardiovascular Health. Retrieved February 1, 2019, from https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html</li>
+                                <br>
+                                <li>Institute of Medicine (US) Committee on a National Surveillance System for Cardiovascular and Select Chronic Diseases. A Nationwide Framework for Surveillance of Cardiovascular and Chronic Lung Diseases. Washington (DC): National Academies Press (US); 2011. 2, Cardiovascular Disease. Available from: https://www.ncbi.nlm.nih.gov/books/NBK83160/</li>
+                                <br>
+                                
+                                <li>V. Ramalingam, V., Dandapath, A., & Karthik Raja, M. (2018). Heart disease prediction using machine learning techniques : a survey. International Journal of Engineering & Technology, 7(2.8), 684-687. doi:http://dx.doi.org/10.14419/ijet.v7i2.8.10557</li>
+                                <br>
+                                <li>Data Science for Social Good | Center for Data Science and Public Policy, University of Chicago. (2018). Pipelines and Project Workflow. Retrieved February 1, 2019, from https://github.com/dssg/hitchhikers-guide/tree/master/curriculum/0_before_you_start/pipelines-and-project-workflow</li>
+                                <br>
+                                <li>Association of American Medical Colleges (AAMC) & National Association of Accountable Care Organizations. (2016). High-Risk-Patient Identification: Strategies for Success (Rep.). Retrieved January 19, 2019, from Association of American Medical Colleges website: https://www.aamc.org/download/470456/data/riskid.pdf.</li>
+                                <br>
+                                <li>Niehaus, K. E., & Clifton, D. A. (2016). Machine learning for chronic disease. Machine Learning for Healthcare Technologies, 2, 227.</li>
+                                <br>
+                                <li>Fryar CD, Chen T, Li X. Prevalence of Uncontrolled Risk Factors for Cardiovascular Disease: United States, 1999–2010. NCHS Data Brief, No. 103. Hyattsville, MD: National Center for Health Statistics, Centers for Disease Control and Prevention, US Dept of Health and Human Services; 2012.</li>
+                            </ul>   
