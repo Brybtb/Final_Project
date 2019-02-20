@@ -4,7 +4,7 @@
 <ul>
 <li>According to the CDC, cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, such as heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability, and the principal causes of cardiovascular disease death [<a href="https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html">1</a>], [<a href="https://www.ncbi.nlm.nih.gov/books/NBK83160/">2</a>].</li>
 <li>Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs.</li>
-<li>This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately classify patients as having or not having cardiovascular disease given certain patient measurements and demogrpahic information. The stroke dataset used for our Cardiovascular Disease Predictor can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here</a>.</li>
+<li>This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately predict cardiovascular disease risk given certain patient measurements and demographic information. The stroke dataset used for our Cardiovascular Disease Predictor can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here</a>.</li>
 <li><i>Keywords: Machine Learning, Cardiovascular Disease, Diagnosis, Classification</i></li>
 </ul>
 
@@ -33,15 +33,15 @@
 
 <h3>Conclusions</h3>
 <ul>
-<li>We used 6 predictor variables from Kaggle’s stroke dataset to classify patients based on the the presence of cardiovascular disease (using their combined risk of having heart disease, stroke and/or hypertension). The six variables chosen included: average glucose level (number between 0 and 300 mg/dL), BMI (number between 0 and 100), age (integer between 0 and 100), marriage status(Ever married? yes or no), gender (male or female), and residence type (urban or rural).</li>
-<li>We then used multiple models to predict the presence of disease. Based on the 8 models that we evaluated, the random forest classifier model using the resampled data was chosen as our final model to use for our flask app, as it had the best harmonic mean between precision and recall (F1 score = 0.83).</li>
+<li>We used 6 predictor variables from Kaggle’s stroke dataset to classify patients based on the the presence of cardiovascular disease (using their combined risk of having heart disease, stroke and/or hypertension). The six variables included: average glucose level (number between 0 and 300 mg/dL), BMI (number between 0 and 100), age (integer between 0 and 100), marriage status (Ever married? yes or no), gender (male or female), and residence type (urban or rural).</li>
+<li>We then used multiple models to predict the presence of disease. Based on the 8 models that we evaluated, the random forest classifier model using the resampled data was chosen as our final model, as it had the best harmonic mean between precision and recall (F1 score = 0.83).</li>
 <li>Furthermore, we determined that the best predictors of cardiovascular disease are the patient's (1) average glucose level, (2) BMI, and (3) age.</li>
 </ul>
  
 <h3>Possible Improvements</h3>
 <ul>
 <li>In the future, we could use k-fold cross-validation when splitting our dataset since we have a small dataset and no single split (like 90:10, 80:20, etc.) is going to give satisfactory variance in its estimates.</li>
-<li>We could also try to further improve our random forest model with hyperparameter tuning through a grid search.</li>
+<li>We could also attempt to further improve our random forest model with hyperparameter tuning through a grid search.</li>
  </ul>
 
 <h3>References</h3>
