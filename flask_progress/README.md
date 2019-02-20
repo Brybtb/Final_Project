@@ -1,13 +1,14 @@
 # Final Project: Predicting Cardiovascular Disease
 
 <h3>Introduction:</h3>
-- According to the CDC, cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, such as heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability, and the principal causes of cardiovascular disease death [<a href="https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html">1</a>], [<a href="https://www.ncbi.nlm.nih.gov/books/NBK83160/">2</a>].
-- Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs.
-- This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately classify patients as having or not having cardiovascular disease given certain patient measurements and demogrpahic information.
-- <i>Keywords: Machine Learning, Cardiovascular Disease, Diagnosis, Classification</i> 
+<ul>
+<li>According to the CDC, cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, such as heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability, and the principal causes of cardiovascular disease death [<a href="https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html">1</a>], [<a href="https://www.ncbi.nlm.nih.gov/books/NBK83160/">2</a>].</li>
+<li>Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs.</li>
+<li>This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately classify patients as having or not having cardiovascular disease given certain patient measurements and demogrpahic information.</li>
+<li><i>Keywords: Machine Learning, Cardiovascular Disease, Diagnosis, Classification</i></li>
+</ul>
 
 <h3>Project Process:</h3> 
-<br>
 <h5>Step 1: Research / Planning / Project Setup</h5>
 <ul>
 <li>Research project topics, datasets, and appropriate machine learning methods related to population health management [<a href="https://www.aamc.org/download/470456/data/riskid.pdf">3</a>], [<a href="https://www.sciencepubco.com/index.php/ijet/article/view/10557">4</a>].</li>
@@ -15,7 +16,6 @@
 <img src="https://raw.githubusercontent.com/dssg/hitchhikers-guide/master/curriculum/0_before_you_start/pipelines-and-project-workflow/pipeline_diagram.png" style="width:100%" alt="data pipeline diagram"></li>
 <li>Create a <a href="https://github.com/Brybtb/Final_Project/tree/master">shared repository</a> in github, add README.md file to repository, upload initial dataset</li>
 </ul>
-<br>
 <h5>Step 2: Create a Jupyter Notebook for ETL and Building Machine Learning Models</h5>
 <ul>
 <li>Data Cleaning: load dataset, inspect basics; handle missing data; handle outliers; binary encoding; explore dataset balance</li>
@@ -23,15 +23,13 @@
 <li>Train different supervised classification machine learning models to predict cardiovascular diagnosis: (1) logistic regression, (2) support vector classifier, (3) decision trees, and (4) random forest classifier</li>
 <li>Export chosen scaler and model for flask application</li>
 </ul>
-<br>
 <h5>Step 3: Create flask app for a prediction dashboard and deploy with Heroku</h5> 
 <ul>
 <li>Set up index.html, style.css, app.py, app.js files</li>
 <li>Set up additional files for heroku deployment</li>
- 
+</ul>
 <h3>Dataset Features:</h3>
-The stroke dataset used for our Cardiovascular Disease Classifier can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</a>
-<br>
+<ul><li>The stroke dataset used for our Cardiovascular Disease Classifier can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</a></li></ul>
 <h5>Feature List:</h5>
 <ul> 
 <li>Average Glucose Level: Number between 0 and 300 (mg/dL)</li>
@@ -41,15 +39,18 @@ The stroke dataset used for our Cardiovascular Disease Classifier can be found <
 <li>Gender: Male or Female</li>
 <li>Residence Type: Urban or Rural</li>
 </ul>
- 
- <h3>Conclusions</h3>
-- We used 6 predictor variables from Kaggle’s stroke dataset to classify patients based on the the presence of cardiovascular disease (using their combined risk of having heart disease, stroke and/or hypertension).
-- We then used multiple models to predict the presence of disease. Based on the 8 models that we evaluated, the random forest classifier model using the resampled data was chosen as our final model to use for our flask app, as it had the best harmonic mean between precision and recall (F1 score = 0.83).
-- Furthermore, we determined that the best predictors of cardiovascular disease are the patient's (1) average glucose level, (2) BMI, and (3) age.
+<h3>Conclusions</h3>
+<ul>
+<li>We used 6 predictor variables from Kaggle’s stroke dataset to classify patients based on the the presence of cardiovascular disease (using their combined risk of having heart disease, stroke and/or hypertension).</li>
+<li>We then used multiple models to predict the presence of disease. Based on the 8 models that we evaluated, the random forest classifier model using the resampled data was chosen as our final model to use for our flask app, as it had the best harmonic mean between precision and recall (F1 score = 0.83).</li>
+<li>Furthermore, we determined that the best predictors of cardiovascular disease are the patient's (1) average glucose level, (2) BMI, and (3) age.</li>
+</ul>
  
 <h3>Possible Improvements</h3>
-- In the future, we could use k-fold cross-validation when splitting our dataset since we have a small dataset and no single split (like 90:10, 80:20, etc.) is going to give satisfactory variance in its estimates
-- We could also try to further improve our random forest model with hyperparameter tuning through a grid search.
+<ul>
+<li>In the future, we could use k-fold cross-validation when splitting our dataset since we have a small dataset and no single split (like 90:10, 80:20, etc.) is going to give satisfactory variance in its estimates.</li>
+<li>We could also try to further improve our random forest model with hyperparameter tuning through a grid search.</li>
+ </ul>
 
 <h3>References:</h3>
 <ul>
