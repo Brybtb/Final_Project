@@ -31,9 +31,9 @@
 <li>Set up additional files for heroku deployment</li>
 </ul>
 
-<h3>Dataset Features:</h3>
-<p>The stroke dataset used for our Cardiovascular Disease Classifier can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</p>
-<h4>Feature List:</h4>
+<h3>Dataset Variables:</h3>
+<p>The stroke dataset used for our Cardiovascular Disease Predictor can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</p>
+<h4>Variable List:</h4>
 <ul> 
 <li>Average Glucose Level: Number between 0 and 300 (mg/dL)</li>
 <li>BMI: Number between 0 and 100</li>
