@@ -11,7 +11,21 @@
 <h3>Project Process</h3> 
 <h4>Step 1: Research / Planning / Project Setup</h4>
 <ul>
-<li>Research project topics, datasets, and appropriate machine learning methods related to population health management [<a href="https://www.aamc.org/download/470456/data/riskid.pdf">3</a>], [<a href="https://www.sciencepubco.com/index.php/ijet/article/view/10557">4</a>].</li>
+<li>Research project topics, datasets, and appropriate machine learning methods related to population health management [<a href="https://www.aamc.org/download/470456/data/riskid.pdf">3</a>], [<a href="https://www.sciencepubco.com/index.php/ijet/article/view/10557">4</a>]. '
+
+<li>The stroke dataset used for our Cardiovascular Disease Classifier can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</a>
+<li>Feature List:
+<ul>
+<li>Average Glucose Level: Number between 0 and 300 (mg/dL)</li>
+<li>BMI: Number between 0 and 100</li>
+<li>Age: Integer between 0 and 100</li>
+<li>Ever married? Yes or No</li>
+<li>Gender: Male or Female</li>
+<li>Residence Type: Urban or Rural</li>
+</ul>
+</li>
+</li>
+
 <li>Define project workflow and conceptualize data pipeline [<a href="https://github.com/dssg/hitchhikers-guide/tree/master/curriculum/0_before_you_start/pipelines-and-project-workflow">5</a>].<br>
 <img src="https://raw.githubusercontent.com/dssg/hitchhikers-guide/master/curriculum/0_before_you_start/pipelines-and-project-workflow/pipeline_diagram.png" style="width:100%" alt="data pipeline diagram"></li>
 <li>Create a <a href="https://github.com/Brybtb/Final_Project/tree/master">shared repository</a> in github, add README.md file to repository, upload initial dataset</li>
