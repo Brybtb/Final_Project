@@ -4,28 +4,16 @@
 <ul>
 <li>According to the CDC, cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, such as heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability, and the principal causes of cardiovascular disease death [<a href="https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html">1</a>], [<a href="https://www.ncbi.nlm.nih.gov/books/NBK83160/">2</a>].</li>
 <li>Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs.</li>
-<li>This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately classify patients as having or not having cardiovascular disease given certain patient measurements and demogrpahic information.</li>
+ 
+<li>This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately classify patients as having or not having cardiovascular disease given certain patient measurements and demogrpahic information. The stroke dataset used for our Cardiovascular Disease Predictor can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here</li>
+ 
 <li><i>Keywords: Machine Learning, Cardiovascular Disease, Diagnosis, Classification</i></li>
 </ul>
 
 <h3>Project Process</h3> 
 <h4>Step 1: Research / Planning / Project Setup</h4>
 <ul>
-<li>Research project topics, datasets, and appropriate machine learning methods related to population health management [<a href="https://www.aamc.org/download/470456/data/riskid.pdf">3</a>], [<a href="https://www.sciencepubco.com/index.php/ijet/article/view/10557">4</a>]. '
-
-<li>The stroke dataset used for our Cardiovascular Disease Classifier can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</a>
-<li>Feature List:
-<ul>
-<li>Average Glucose Level: Number between 0 and 300 (mg/dL)</li>
-<li>BMI: Number between 0 and 100</li>
-<li>Age: Integer between 0 and 100</li>
-<li>Ever married? Yes or No</li>
-<li>Gender: Male or Female</li>
-<li>Residence Type: Urban or Rural</li>
-</ul>
-</li>
-</li>
-
+<li>Research project topics, datasets, and appropriate machine learning methods related to population health management [<a href="https://www.aamc.org/download/470456/data/riskid.pdf">3</a>], [<a href="https://www.sciencepubco.com/index.php/ijet/article/view/10557">4</a>].</li>
 <li>Define project workflow and conceptualize data pipeline [<a href="https://github.com/dssg/hitchhikers-guide/tree/master/curriculum/0_before_you_start/pipelines-and-project-workflow">5</a>].<br>
 <img src="https://raw.githubusercontent.com/dssg/hitchhikers-guide/master/curriculum/0_before_you_start/pipelines-and-project-workflow/pipeline_diagram.png" style="width:100%" alt="data pipeline diagram"></li>
 <li>Create a <a href="https://github.com/Brybtb/Final_Project/tree/master">shared repository</a> in github, add README.md file to repository, upload initial dataset</li>
@@ -45,21 +33,9 @@
 <li>Set up additional files for heroku deployment</li>
 </ul>
 
-<h3>Dataset Variables:</h3>
-<p>The stroke dataset used for our Cardiovascular Disease Predictor can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</p>
-<h4>Variable List:</h4>
-<ul> 
-<li>Average Glucose Level: Number between 0 and 300 (mg/dL)</li>
-<li>BMI: Number between 0 and 100</li>
-<li>Age: Integer between 0 and 100</li>
-<li>Ever married? Yes or No</li>
-<li>Gender: Male or Female</li>
-<li>Residence Type: Urban or Rural</li>
-</ul>
-
 <h3>Conclusions</h3>
 <ul>
-<li>We used 6 predictor variables from Kaggle’s stroke dataset to classify patients based on the the presence of cardiovascular disease (using their combined risk of having heart disease, stroke and/or hypertension).</li>
+<li>We used 6 predictor variables from Kaggle’s stroke dataset to classify patients based on the the presence of cardiovascular disease (using their combined risk of having heart disease, stroke and/or hypertension). The six variables chosen included: average glucose level (number between 0 and 300 mg/dL), BMI (number between 0 and 100), age (integer between 0 and 100), marriage status(Ever married? yes or no), gender (male or female), and residence type (urban or rural).</li>
 <li>We then used multiple models to predict the presence of disease. Based on the 8 models that we evaluated, the random forest classifier model using the resampled data was chosen as our final model to use for our flask app, as it had the best harmonic mean between precision and recall (F1 score = 0.83).</li>
 <li>Furthermore, we determined that the best predictors of cardiovascular disease are the patient's (1) average glucose level, (2) BMI, and (3) age.</li>
 </ul>
