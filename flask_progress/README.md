@@ -1,6 +1,6 @@
 # Final Project: Predicting Cardiovascular Disease
 
-<h3>Introduction:</h3>
+<h3>Introduction</h3>
 <ul>
 <li>According to the CDC, cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, such as heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability, and the principal causes of cardiovascular disease death [<a href="https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html">1</a>], [<a href="https://www.ncbi.nlm.nih.gov/books/NBK83160/">2</a>].</li>
 <li>Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs.</li>
@@ -8,29 +8,32 @@
 <li><i>Keywords: Machine Learning, Cardiovascular Disease, Diagnosis, Classification</i></li>
 </ul>
 
-<h3>Project Process:</h3> 
-<h5>Step 1: Research / Planning / Project Setup</h5>
+<h3>Project Process</h3> 
+<h4>Step 1: Research / Planning / Project Setup</h4>
 <ul>
 <li>Research project topics, datasets, and appropriate machine learning methods related to population health management [<a href="https://www.aamc.org/download/470456/data/riskid.pdf">3</a>], [<a href="https://www.sciencepubco.com/index.php/ijet/article/view/10557">4</a>].</li>
 <li>Define project workflow and conceptualize data pipeline [<a href="https://github.com/dssg/hitchhikers-guide/tree/master/curriculum/0_before_you_start/pipelines-and-project-workflow">5</a>].<br>
 <img src="https://raw.githubusercontent.com/dssg/hitchhikers-guide/master/curriculum/0_before_you_start/pipelines-and-project-workflow/pipeline_diagram.png" style="width:100%" alt="data pipeline diagram"></li>
 <li>Create a <a href="https://github.com/Brybtb/Final_Project/tree/master">shared repository</a> in github, add README.md file to repository, upload initial dataset</li>
 </ul>
-<h5>Step 2: Create a Jupyter Notebook for ETL and Building Machine Learning Models</h5>
+
+<h4>Step 2: Create a Jupyter Notebook for ETL and Building Machine Learning Models</h4>
 <ul>
 <li>Data Cleaning: load dataset, inspect basics; handle missing data; handle outliers; binary encoding; explore dataset balance</li>
 <li>Data Exploration: View variable distributions; view descriptive statistics; view relationships among variables, evaluate variable importance</li>
 <li>Train different supervised classification machine learning models to predict cardiovascular diagnosis: (1) logistic regression, (2) support vector classifier, (3) decision trees, and (4) random forest classifier</li>
 <li>Export chosen scaler and model for flask application</li>
 </ul>
-<h5>Step 3: Create flask app for a prediction dashboard and deploy with Heroku</h5> 
+
+<h4>Step 3: Create flask app for a prediction dashboard and deploy with Heroku</h4> 
 <ul>
 <li>Set up index.html, style.css, app.py, app.js files</li>
 <li>Set up additional files for heroku deployment</li>
 </ul>
+
 <h3>Dataset Features:</h3>
-<ul><li>The stroke dataset used for our Cardiovascular Disease Classifier can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</a></li></ul>
-<h5>Feature List:</h5>
+<p>The stroke dataset used for our Cardiovascular Disease Classifier can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</p>
+<h4>Feature List:</h4>
 <ul> 
 <li>Average Glucose Level: Number between 0 and 300 (mg/dL)</li>
 <li>BMI: Number between 0 and 100</li>
@@ -39,6 +42,7 @@
 <li>Gender: Male or Female</li>
 <li>Residence Type: Urban or Rural</li>
 </ul>
+
 <h3>Conclusions</h3>
 <ul>
 <li>We used 6 predictor variables from Kaggle’s stroke dataset to classify patients based on the the presence of cardiovascular disease (using their combined risk of having heart disease, stroke and/or hypertension).</li>
@@ -52,7 +56,7 @@
 <li>We could also try to further improve our random forest model with hyperparameter tuning through a grid search.</li>
  </ul>
 
-<h3>References:</h3>
+<h3>References</h3>
 <ul>
 <li>Centers for Disease Control and Prevention. (2017, September 15). Cardiovascular Health. Retrieved February 1, 2019, from https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html</li>
 <li>Institute of Medicine (US) Committee on a National Surveillance System for Cardiovascular and Select Chronic Diseases. A Nationwide Framework for Surveillance of Cardiovascular and Chronic Lung Diseases. Washington (DC): National Academies Press (US); 2011. 2, Cardiovascular Disease. Available from: https://www.ncbi.nlm.nih.gov/books/NBK83160/</li>
