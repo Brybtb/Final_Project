@@ -21,7 +21,7 @@
 <ul>
 <li>Data Cleaning: load dataset, inspect basics; handle missing data; handle outliers; binary encoding; define target variable</li>
 <li>Data Exploration: view dataset balance; view variable distributions; view descriptive statistics; view relationships among variables, evaluate variable importance</li>
-<li>Create a balanced dataset then train supervised classification machine learning models on original and re-sampled dataset: (1) logistic regression, (2) support vector classifier, (3) decision trees, and (4) random forest classifier.</li>
+<li>Create a balanced dataset then train supervised classification machine learning models on both the original and re-sampled datasets: (1) logistic regression, (2) support vector classifier, (3) decision trees, and (4) random forest classifier.</li>
 <li>Evaluate models trained with original and re-sampled data and choose one of the 8 as the final model; export chosen scaler and model for flask application</li>
 </ul>
 
