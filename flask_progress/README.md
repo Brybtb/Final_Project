@@ -1,12 +1,12 @@
-# Final_Project 
+# Final Project: Predicting Cardiovascular Disease
 
-Predicting Cardiovascular Disease
+<h3>Introduction:</h3>
 - According to the CDC, cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, such as heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death in the United States, major causes of disability, and the principal causes of cardiovascular disease death [<a href="https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html">1</a>], [<a href="https://www.ncbi.nlm.nih.gov/books/NBK83160/">2</a>].
 - Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs.
 - This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately classify patients as having or not having cardiovascular disease given certain patient measurements and demogrpahic information.
 - <i>Keywords: Machine Learning, Cardiovascular Disease, Diagnosis, Classification</i> 
 
-Project Process: 
+<h3>Project Process:</h3> 
 <br>
 <h5>Step 1: Research / Planning / Project Setup</h5>
 <ul>
@@ -29,10 +29,10 @@ Project Process:
 <li>Set up index.html, style.css, app.py, app.js files</li>
 <li>Set up additional files for heroku deployment</li>
  
-Dataset Features:
+<h3>Dataset Features:</h3>
 The stroke dataset used for our Cardiovascular Disease Classifier can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here.</a>
 <br>
-Feature List:
+<h5>Feature List:</h5>
 <ul> 
 <li>Average Glucose Level: Number between 0 and 300 (mg/dL)</li>
 <li>BMI: Number between 0 and 100</li>
@@ -53,18 +53,11 @@ Feature List:
 
 <h3>References:</h3>
 <ul>
-                                <li>Centers for Disease Control and Prevention. (2017, September 15). Cardiovascular Health. Retrieved February 1, 2019, from https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html</li>
-                                <br>
-                                <li>Institute of Medicine (US) Committee on a National Surveillance System for Cardiovascular and Select Chronic Diseases. A Nationwide Framework for Surveillance of Cardiovascular and Chronic Lung Diseases. Washington (DC): National Academies Press (US); 2011. 2, Cardiovascular Disease. Available from: https://www.ncbi.nlm.nih.gov/books/NBK83160/</li>
-                                <br>
-                                
-                                <li>V. Ramalingam, V., Dandapath, A., & Karthik Raja, M. (2018). Heart disease prediction using machine learning techniques : a survey. International Journal of Engineering & Technology, 7(2.8), 684-687. doi:http://dx.doi.org/10.14419/ijet.v7i2.8.10557</li>
-                                <br>
-                                <li>Data Science for Social Good | Center for Data Science and Public Policy, University of Chicago. (2018). Pipelines and Project Workflow. Retrieved February 1, 2019, from https://github.com/dssg/hitchhikers-guide/tree/master/curriculum/0_before_you_start/pipelines-and-project-workflow</li>
-                                <br>
-                                <li>Association of American Medical Colleges (AAMC) & National Association of Accountable Care Organizations. (2016). High-Risk-Patient Identification: Strategies for Success (Rep.). Retrieved January 19, 2019, from Association of American Medical Colleges website: https://www.aamc.org/download/470456/data/riskid.pdf.</li>
-                                <br>
-                                <li>Niehaus, K. E., & Clifton, D. A. (2016). Machine learning for chronic disease. Machine Learning for Healthcare Technologies, 2, 227.</li>
-                                <br>
-                                <li>Fryar CD, Chen T, Li X. Prevalence of Uncontrolled Risk Factors for Cardiovascular Disease: United States, 1999–2010. NCHS Data Brief, No. 103. Hyattsville, MD: National Center for Health Statistics, Centers for Disease Control and Prevention, US Dept of Health and Human Services; 2012.</li>
-                            </ul>   
+<li>Centers for Disease Control and Prevention. (2017, September 15). Cardiovascular Health. Retrieved February 1, 2019, from https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html</li>
+<li>Institute of Medicine (US) Committee on a National Surveillance System for Cardiovascular and Select Chronic Diseases. A Nationwide Framework for Surveillance of Cardiovascular and Chronic Lung Diseases. Washington (DC): National Academies Press (US); 2011. 2, Cardiovascular Disease. Available from: https://www.ncbi.nlm.nih.gov/books/NBK83160/</li>
+<li>V. Ramalingam, V., Dandapath, A., & Karthik Raja, M. (2018). Heart disease prediction using machine learning techniques : a survey. International Journal of Engineering & Technology, 7(2.8), 684-687. doi:http://dx.doi.org/10.14419/ijet.v7i2.8.10557</li>
+<li>Data Science for Social Good | Center for Data Science and Public Policy, University of Chicago. (2018). Pipelines and Project Workflow. Retrieved February 1, 2019, from https://github.com/dssg/hitchhikers-guide/tree/master/curriculum/0_before_you_start/pipelines-and-project-workflow</li>
+<li>Association of American Medical Colleges (AAMC) & National Association of Accountable Care Organizations. (2016). High-Risk-Patient Identification: Strategies for Success (Rep.). Retrieved January 19, 2019, from Association of American Medical Colleges website: https://www.aamc.org/download/470456/data/riskid.pdf.</li>
+<li>Niehaus, K. E., & Clifton, D. A. (2016). Machine learning for chronic disease. Machine Learning for Healthcare Technologies, 2, 227.</li>
+<li>Fryar CD, Chen T, Li X. Prevalence of Uncontrolled Risk Factors for Cardiovascular Disease: United States, 1999–2010. NCHS Data Brief, No. 103. Hyattsville, MD: National Center for Health Statistics, Centers for Disease Control and Prevention, US Dept of Health and Human Services; 2012.</li>
+</ul>   
