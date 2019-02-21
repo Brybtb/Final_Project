@@ -4,7 +4,7 @@
 <ul>
 <li>According to the CDC, cardiovascular disease refers to several types of conditions affecting the heart and blood vessels, such as heart disease, stroke and hypertension (high blood pressure). Heart disease and stroke are two of the leading causes of death, major causes of disability, and the principal causes of cardiovascular disease death in the United States[<a href="https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/CardiovascularHealth.html">1</a>], [<a href="https://www.ncbi.nlm.nih.gov/books/NBK83160/">2</a>].</li>
 <li>Identifying factors related to common cardiovascular diseases would enable targeted preventative health intervention for populations at highest risk to potentially reduce poor health outcomes and associated medical costs.</li>
-<li>This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning methods most accurately predict cardiovascular disease risk given certain patient measurements and demographic information. The stroke dataset used for our Cardiovascular Disease Predictor can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here</a>.</li>
+<li>This project aims to investigate factors that lead to cardiovascular disease as well as to explore which supervised machine learning method most accurately predict cardiovascular disease risk given certain patient measurements and demographic information. The stroke dataset used for our Cardiovascular Disease Predictor can be found <a href="https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data">here</a>.</li>
 <li><i>Keywords: Machine Learning, Cardiovascular Disease, Diagnosis, Classification</i></li>
 </ul>
 
