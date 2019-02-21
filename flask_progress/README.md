@@ -8,7 +8,7 @@
 <li><i>Keywords: Machine Learning, Cardiovascular Disease, Diagnosis, Classification</i></li>
 </ul>
 
-<h3>Project Process</h3> 
+<h3>Process</h3> 
 <h4>Step 1: Research / Planning / Project Setup</h4>
 <ul>
 <li>Research project topics, datasets, and appropriate machine learning methods related to healthcare [<a href="https://www.aamc.org/download/470456/data/riskid.pdf">3</a>], [<a href="https://www.sciencepubco.com/index.php/ijet/article/view/10557">4</a>].</li>
@@ -36,7 +36,7 @@
 <li>We used 6 predictor variables from Kaggle’s stroke dataset to classify patients based on the the presence of cardiovascular disease (using their combined risk of having heart disease, stroke and/or hypertension). The six variables included: average glucose level (number between 0 and 300 mg/dL), BMI (number between 0 and 100), age (integer between 0 and 100), marriage status (Ever married? yes or no), gender (male or female), and residence type (urban or rural).</li>
 <li>We then used multiple models to predict the presence of disease. Based on the 8 models that we evaluated, the random forest classifier model using the resampled data was chosen as our final model, as it had the best harmonic mean between precision and recall (F1 score = 0.83).</li>
 <li>Furthermore, we determined that the best predictors of cardiovascular disease are the patient's (1) average glucose level, (2) BMI, and (3) age.</li>
-<li> Our final heroku application demonstrates a real-life utilization of our model such that a prediction of cardiovascular risk level is determined based on input, enabling identification of patients who would benefit most from intervention.</li>
+ <li> Our <a href="https://heartdiseaseprediction.herokuapp.com">final heroku application</a> demonstrates a real-life utilization of our model such that a prediction of cardiovascular risk level is determined based on input, enabling identification of patients who would benefit most from intervention.</li>
 </ul>
  
 <h3>Possible Improvements</h3>
