@@ -1,5 +1,5 @@
 <h1>Predicting Cardiovascular Disease</h1>
-(view our final prediction app <a href"https://heartdiseaseprediction.herokuapp.com/">here</a>.
+(view our final prediction app <a href="https://heartdiseaseprediction.herokuapp.com/">here</a>.
 <br>
 <h3>Introduction</h3>
 <ul>
